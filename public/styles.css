@@ -1,0 +1,138 @@
+:root {
+  --brightblue: dodgerblue;
+  --darkblue: #0411c4;
+  --hoverblue: #000769;
+  --white: white;
+  --sixpx: 6px;
+  --fivepx: 5px;
+  --tenpx: 10px;
+  --capitalletter: uppercase;
+  --flexbox: flex;
+  --centered: center;
+  --column: column;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+header {
+  background-color: var(--brightblue);
+  padding: var(--fivepx) var(--tenpx);
+  display: var(--flexbox);
+  justify-content: space-between;
+  align-items: var(--centered);
+}
+nav a {
+  background-color: var(--darkblue);
+  color: cyan;
+  text-transform: var(--capitalletter);
+  text-decoration: none;
+  padding: 8px;
+  border-radius: var(--sixpx);
+}
+nav a:hover {
+  background-color: var(--hoverblue);
+  text-decoration: underline;
+  color: var(--white);
+}
+.fa.fa-github {
+  font-size: 20px;
+}
+#dashboard-form,
+#public-images-board,
+#images-board,
+#all-images-board {
+  display: var(--flexbox);
+  justify-content: var(--centered);
+  align-items: var(--centered);
+  flex-direction: var(--column);
+}
+#public-images-list,
+#images-list,
+#all-images-list {
+  display: var(--flexbox);
+  justify-content: var(--centered);
+  flex-wrap: wrap;
+  width: 45%;
+}
+#dashboard-form #add-image-form input {
+  font-size: 18px;
+  padding: var(--fivepx);
+}
+#dashboard-form #add-image-form input[type="submit"] {
+  background-color: var(--brightblue);
+  text-transform: var(--capitalletter);
+  border: 0;
+  border-radius: var(--sixpx);
+  cursor: pointer;
+}
+#dashboard-form #add-image-form input[type="submit"]:hover {
+  background-color: #431bf3;
+}
+.grid-item {
+  display: var(--flexbox);
+  justify-content: var(--centered);
+  align-items: var(--centered);
+  flex-direction: var(--column);
+  margin: var(--tenpx);
+  width: 250px;
+  background-color: var(--brightblue);
+  padding: 15px;
+  line-height: 0px;
+  box-shadow: 3px 5px 5px 3px rgba(0, 0, 0, 0.5);
+}
+img {
+  height: 150px;
+  border: var(--fivepx) solid var(--darkblue);
+}
+.heart-icon {
+  font-size: 20px;
+  color: #b8072d;
+  cursor: pointer;
+}
+.delete-btn {
+  background-color: var(--darkblue);
+  border: 0;
+  color: var(--white);
+  padding: var(--sixpx);
+  text-transform: var(--capitalletter);
+}
+.delete-btn:hover {
+  background-color: var(--hoverblue);
+}
+.grid-item,
+img,
+.delete-btn {
+  border-radius: var(--sixpx);
+}
+nav a,
+#dashboard-form #add-image-form input[type="submit"],
+.delete-btn {
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  header,
+  nav,
+  #dashboard-form #add-image-form {
+    display: var(--flexbox);
+    flex-direction: var(--column);
+    gap: var(--sixpx);
+  }
+  .grid-item {
+    display: var(--flexbox);
+    justify-content: var(--centered);
+    width: 200px;
+    height: 250px;
+    padding: 30px;
+  }
+  img {
+    height: 50%;
+  }
+  h1,
+  nav a {
+    text-align: var(--centered);
+  }
+  nav a {
+    width: 100%;
+  }
+}

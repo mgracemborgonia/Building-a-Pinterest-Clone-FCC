@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building a Pinterest Clone - FCC All Images</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Building a Pinterest Clone - FCC</h1>
+      <h3>Hello User!</h3>
+      <nav>
+        <a href="/dashboard.html">My Dashboard</a>
+        <a id="all-images" href="/all_images.html">All Images</a>
+        <a href="/home.html">Log Out</a>
+      </nav>
+    </header>
+    <section id="all-images-board">
+      <h2>All Images</h2>
+      <div id="all-images-list"></div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="/src/all_images.js"></script>
+    <script src="/src/image-error.js"></script>
+  </body>
+</html>

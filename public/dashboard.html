@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building a Pinterest Clone - FCC Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Building a Pinterest Clone - FCC</h1>
+      <h3>Hello User!</h3>
+      <nav>
+        <a id="dashboard" href="/dashboard.html">My Dashboard</a>
+        <a href="/all_images.html">All Images</a>
+        <a href="/home.html">Log Out</a>
+      </nav>
+    </header>
+    <section id="dashboard-form">
+      <h2>Add a New Image</h2>
+      <form id="add-image-form">
+        <input
+          type="text"
+          name="title"
+          id="image-title"
+          placeholder="Title of an image"
+          required
+        />
+        <input
+          type="url"
+          name="url"
+          id="image-url"
+          placeholder="Add an image URL"
+          required
+        />
+        <input type="submit" value="Add Image" />
+      </form>
+    </section>
+    <section id="images-board">
+      <h2>My Images</h2>
+      <div id="images-list"></div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="/src/dashboard.js"></script>
+    <script src="/src/image-error.js"></script>
+  </body>
+</html>
